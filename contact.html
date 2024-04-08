@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Olha Tsurenko - Contact</title>
+      <link rel="shortcut icon" href="/img/mfavicon.png" type="image/img">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/style.production.css">
+   </head>
+   <body>
+      <header class="page-header">
+         <!--Add your logo here-->
+         <img src="./img/logo3.png" class="logo page-header__item" alt="logo">
+         <nav class="main-navigation page-header__item">
+            <ul role="menubar" class="navigation-list">
+               <li role="presentation">
+                  <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item">Home</a>
+               </li>
+               <li role="presentation">
+                  <a href="about.html" role="menuitem" aria-label="About me" class="navigation-list__item">About</a>
+               </li>
+               <li role="presentation">
+                  <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+               </li>
+               <li role="presentation">
+                  <a href="contact.html" role="menuitem" class="navigation-list__item--active">Contact</a>
+               </li>
+            </ul>
+         </nav>
+      </header>
+      <main>
+         <div class="contact-info">
+            <h1>Contact</h1>
+            <p>Ready to start a project together? Contact me to discuss how we can work together to bring your ideas to
+               life.
+            </p>
+         </div>
+         <div class="form">
+            <form action="process_contact.php" method="post" id="contact-form">
+               <label class="standard-label" for="contact-email">E-mail: </label>
+               <input type="email" id="contact-email" required>
+               <label class="standard-label" for="contact-telephone">Telephone: </label>
+               <input type="tel" id="contact-telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+               <label class="standard-label" for="contact-message">Message: </label>
+               <textarea id="contact-message" name="message" maxlength="240" required></textarea>
+               <input type="submit" value="Send message">
+            </form>
+         </div>
+      </main>
+      <footer class="page-footer">
+         <div class="contact-adress">
+            <h2>Olha Tsurenko</h2>
+            <p> Mittelstrasse 13C<br>13055 Berlin<br>Deutschland</p>
+            <p>
+               Tel: <a href="tel:+4917624154889" aria-label="Call +4917624154889">+4917624154889</a>
+            </p>
+            <p>
+               Skype: <a href="skype:olha.tsurenko">olha.tsurenko</a>
+            </p>
+            <button onclick="window.location.href='mailto:olga.tsurenko@gmail.com'">Contact me</button>
+         </div>
+         <div class="find-me">
+            <p>Find me on</p>
+         </div>
+         <div class="social icons">
+            <!--Github logo-->
+            <a href="https://github.com/o-vilna" target="_blank">
+            <img src="./img/github.svg" class="icon" alt="Github">
+            </a>
+            <!--LinkedIn logo-->
+            <a href="https://www.linkedin.com/in/olha-tsurenko-24b36951/" target="_blank">
+            <img src="./img/mylinkedin.svg" class="icon" alt="LinkedIn">
+            </a>
+            <!--Facebook logo-->
+            <a href="https://www.facebook.com/profile.phd/?id=100000603968886" target="_blank">
+            <img src="./img/facebook.svg" class="icon" alt="Facebook">
+            </a>
+         </div>
+      </footer>
+      <div class="back-to-top-button">
+         <button onclick="window.scrollTo(0, 0)">Back to top</button>
+      </div>
+      <script src="js/tota11y.min.js"></script>
+   </body>
+</html>
