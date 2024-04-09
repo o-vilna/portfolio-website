@@ -27,13 +27,20 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: var(--font-size-base);
-  line-height: 1.6; /* інтервал між рядками */
+  line-height: 1.6;
   background-color: var(--background-color);
   color: var(--text-color-dark-blue);
   padding: 20px;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
 }
 
 .page-header {
