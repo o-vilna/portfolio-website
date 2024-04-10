@@ -40,13 +40,18 @@ body {
 }
 
 main {
-  flex-grow: 1;
+  flex-grow: 1; /* to expand the main content area to fill the available space */
+  padding-top: 100px; /* to prevent the header from overlapping the content */
 }
 
 .page-header {
   display: flex;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
+  position: fixed; /* make the header sticky */
+  top: 0; /* position it at the top of the viewport */
+  background-color: #fff8ed;
+  z-index: 1000; /* ensure it appears above other content */
 }
 
 .page-header__item {
@@ -174,8 +179,12 @@ a:visited {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
-  clear: both;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff8ed;
+  padding: 10px;
+  z-index: 999;
 }
 
 .logo {
