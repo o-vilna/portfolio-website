@@ -30,10 +30,22 @@ body {
 }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1; /* to expand the main content area to fill the available space */
-  padding-top: 100px; /* to prevent the header from overlapping the content */
 }
 
 .page-header {
@@ -42,7 +54,7 @@ main {
   display: flex;
   width: 100%;
   padding: 10px;
-  position: fixed; /* make the header sticky */
+  position: sticky; /* make the header sticky */
   top: 0; /* position it at the top of the viewport */
   background-color: #fff8ed;
   z-index: 1000; /* ensure it appears above other content */
@@ -72,14 +84,34 @@ main {
 
 .profile__portrait {
   float: left;
-  width: 250px;
+  width: 300px;
   margin-right: 40px;
   border-radius: 50%;
 }
 
 .welcome-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   max-width: 700px;
   margin: 0 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.welcome-text-heading {
+  font-size: 30px;
+}
+
+.welcome-text-subheading {
+  font-size: medium;
 }
 
 .button {
@@ -218,7 +250,7 @@ a:visited {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: fixed;
+  position: sticky;
   bottom: 0;
   width: 100%;
   background-color: #fff8ed;
@@ -234,7 +266,11 @@ a:visited {
 
 .icon {
   width: 35px;
-  height: 40px;
+  height: 35px;
+}
+
+.social-icon-links {
+  text-decoration: none;
 }
 
 * {
@@ -297,7 +333,9 @@ a:visited {
     background-color: #e0e0e0;
     width: auto;
     min-height: auto;
+    text-align: left;
     margin: 0;
+    padding: 10px;
   }
 
   .grid__item:last-child {
@@ -323,7 +361,6 @@ a:visited {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 100px;
 }
 
 .contact-adress {
@@ -515,13 +552,12 @@ a:visited {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
   margin-top: 20px;
   padding: 20px;
 }
