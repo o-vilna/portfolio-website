@@ -10,7 +10,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="css/styles.css">
+      <link rel="stylesheet" type="text/css" href="css/style.production.css">
    </head>
    <body>
       <header class="page-header">
@@ -45,7 +45,7 @@
                <label class="standard-label" for="contact-email">E-mail: </label>
                <input type="email" id="contact-email" required>
                <label class="standard-label" for="contact-telephone">Telephone: </label>
-               <input type="tel" id="contact-telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+               <input type="tel" id="contact-telephone" pattern="^\+\d+$">
                <label class="standard-label" for="contact-message">Message: </label>
                <textarea id="contact-message" name="message" maxlength="240" required></textarea>
                <input type="submit" value="Send message">
@@ -54,9 +54,6 @@
          <div class="contact-adress">
             <h2>Olha Tsurenko</h2>
             <p> Mittelstrasse 13<br>13055 Berlin<br>Deutschland</p>
-            <p>
-               Tel: <a href="tel:+4917624154889" aria-label="Call +4917624154889">+4917624154889</a>
-            </p>
             <p>
                Skype: <a href="skype:olha.tsurenko">olha.tsurenko</a>
             </p>

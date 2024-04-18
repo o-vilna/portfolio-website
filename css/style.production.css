@@ -297,7 +297,7 @@ a:visited {
   position: relative;
 }
 
-.grid__item:hover {
+.grid__item :hover {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
   cursor: pointer;
@@ -563,6 +563,10 @@ a:visited {
   margin-top: 20px;
 }
 
+.about p {
+  font-size: 16px;
+}
+
 .form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -635,6 +639,17 @@ a:visited {
   .welcome-section {
     margin: 0 auto;
     text-align: center;
+  }
+
+  .about {
+    float: none;
+    text-align: center;
+  }
+
+  .berlin-image {
+    float: none;
+    width: 250px;
+    height: 250px;
   }
 }
 
