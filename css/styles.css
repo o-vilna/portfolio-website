@@ -48,6 +48,12 @@ main {
   /* padding-top: 100px; /* to prevent the header from overlapping the content */
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 .page-header {
   display: flex;
   width: 100%;
@@ -90,6 +96,11 @@ main {
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.welcome-text {
+  text-align: center;
 }
 
 .welcome-text-heading {
