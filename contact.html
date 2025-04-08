@@ -68,17 +68,32 @@
 
       <div class="contact-form">
         <h2>Send a Message</h2>
-        <form class="form" action="#" method="post" id="contact-form">
+        <form
+          class="form"
+          action="https://formspree.io/f/xwplwdrp"
+          method="POST"
+          id="contact-form"
+        >
+          <div class="form-group">
+            <label class="standard-label" for="contact-name">Name: </label>
+            <input type="text" id="contact-name" name="name" required />
+          </div>
+
           <div class="form-group">
             <label class="standard-label" for="contact-email">E-mail: </label>
-            <input type="email" id="contact-email" required />
+            <input type="email" id="contact-email" name="email" required />
           </div>
 
           <div class="form-group">
             <label class="standard-label" for="contact-telephone"
               >Telephone:
             </label>
-            <input type="tel" id="contact-telephone" pattern="^\+\d+$" />
+            <input
+              type="tel"
+              id="contact-telephone"
+              name="telephone"
+              pattern="^\+\d+$"
+            />
           </div>
 
           <div class="form-group">
@@ -93,6 +108,10 @@
             ></textarea>
           </div>
 
+          <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+
+          <input type="text" name="_gotcha" style="display: none" />
+
           <input type="submit" value="Send message" class="submit-button" />
         </form>
       </div>
@@ -100,10 +119,6 @@
       <div class="contact-details">
         <h2>Reach Me Directly</h2>
         <ul class="contact-list">
-          <li>
-            <strong>Email:</strong>
-            <a href="mailto:olga.tsurenko@gmail.com">olga.tsurenko@gmail.com</a>
-          </li>
           <li>
             <strong>LinkedIn:</strong>
             <a
@@ -159,5 +174,6 @@
       <button onclick="window.scrollTo(0, 0)">Back to top</button>
     </div>
     <script src="js/tota11y.min.js"></script>
+    <script src="js/formHandler.js"></script>
   </body>
 </html>
