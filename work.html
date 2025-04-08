@@ -60,29 +60,33 @@
     <!--Main content-->
     <section>
       <div>
-        <h1 class="work custom-heading" id="Work">Work</h1>
+        <h1 class="work custom-heading">Work</h1>
       </div>
       <div class="grid">
         <!--Grid items will live here-->
         <div class="grid__item">
-          <div class="overlay">
-            <img
-              src="./img/meet-app-screenshot.png"
-              alt="Meet App Screenshot"
-              class="project-hover-image"
-            />
-          </div>
           <h2 class="custom-heading">Meet App</h2>
-          <p>
-            A serverless, progressive web application (PWA) built with React
-            using a test-driven development (TDD) approach. The application
-            fetches upcoming events from the Google Calendar API and provides an
-            interactive, data-driven user experience.
-          </p>
-          <p>
-            <strong>Technologies:</strong> React, AWS Lambda, OAuth2, Service
-            Workers, Recharts, Jest, React Testing Library.
-          </p>
+          <div class="project-image-container">
+            <div class="project-info">
+              <p>
+                A serverless, progressive web application (PWA) built with React
+                using a test-driven development (TDD) approach. The application
+                fetches upcoming events from the Google Calendar API and
+                provides an interactive, data-driven user experience.
+              </p>
+              <p>
+                <strong>Technologies:</strong> React, AWS Lambda, OAuth2,
+                Service Workers, Recharts, Jest, React Testing Library.
+              </p>
+            </div>
+            <div class="overlay">
+              <img
+                src="./img/meet-app-screenshot.png"
+                alt="Meet App Screenshot"
+                class="project-hover-image"
+              />
+            </div>
+          </div>
           <div class="project-links">
             <a href="https://meet-brown.vercel.app/" target="_blank"
               >Live Demo</a
@@ -93,47 +97,179 @@
           </div>
         </div>
         <div class="grid__item">
-          <div class="overlay"></div>
-          <h3 class="custom-heading">Native MacOS application</h3>
-          <p>
-            Whithin this project I was responsible for the front-end. It was
-            written in JavaFX.
-          </p>
-          <a href="#">See my project on Github</a>
+          <h2 class="custom-heading">Chat App</h2>
+          <div class="project-image-container">
+            <div class="project-info">
+              <p>
+                A mobile chat application built with React Native that enables
+                users to exchange messages, share images, and locations in
+                real-time with offline support.
+              </p>
+              <p>
+                <strong>Technologies:</strong> React Native, Expo, Firebase
+                (Firestore, Authentication, Cloud Storage), Gifted Chat Library,
+                AsyncStorage
+              </p>
+            </div>
+            <div class="overlay">
+              <img
+                src="./img/chatapp-screenshot.png"
+                alt="ChatApp Screenshot"
+                class="project-hover-image"
+              />
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/o-vilna/ChatApp" target="_blank"
+              >GitHub Repository</a
+            >
+          </div>
         </div>
         <div class="grid__item">
-          <div class="overlay"></div>
-          <h4 class="custom-heading">Node.js pdf generation</h4>
-          <p>
-            Whithin this project I created a service that generates pdf out of
-            webpages with the help of a node.js server.
-          </p>
-          <a href="#">See my project on Github</a>
+          <h2 class="custom-heading">myFlix React App</h2>
+          <div class="project-image-container">
+            <div class="project-info">
+              <p>
+                A MERN stack movie application with React frontend and
+                Node.js/Express backend. Users can browse movies, create
+                accounts, add favorites, and view details about films,
+                directors, and genres.
+              </p>
+              <p>
+                <strong>Frontend:</strong> React, React Bootstrap, React Router,
+                Parcel
+              </p>
+              <p>
+                <strong>Backend:</strong> Node.js, Express, MongoDB, JWT
+                Authentication, Passport, Mongoose
+              </p>
+            </div>
+            <div class="overlay">
+              <img
+                src="./img/myflix-react-screenshot.png"
+                alt="myFlix React App Screenshot"
+                class="project-hover-image"
+              />
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://m-flixx.netlify.app/login" target="_blank"
+              >Live Demo</a
+            >
+            <a href="https://github.com/o-vilna/MyFlix-client" target="_blank"
+              >Frontend Repo</a
+            >
+            <a href="https://github.com/o-vilna/movie_api" target="_blank"
+              >Backend Repo</a
+            >
+          </div>
         </div>
         <div class="grid__item">
-          <div class="overlay"></div>
-          <h5 class="custom-heading">Styleguide for portfolio page</h5>
-          <p>
-            Here you can find the styleguide i have created for this portfolio
-            page. It was created with the livingstyleguide gem and grunt.
-          </p>
-          <a href="#">See styleguide</a>
+          <h2 class="custom-heading">Pokédex App</h2>
+          <div class="project-image-container">
+            <div class="project-info">
+              <p>
+                This web application allows users to browse and search for
+                Pokémon using the PokeAPI. Users can click on any Pokémon in the
+                list to view detailed information in an interactive modal
+                window.
+              </p>
+              <p>
+                <strong>Technologies:</strong> HTML5, CSS3, JavaScript (ES6+),
+                Fetch API, ESLint, Responsive Design
+              </p>
+            </div>
+            <div class="overlay">
+              <img
+                src="./img/pokedex-screenshot.png"
+                alt="Pokédex App Screenshot"
+                class="project-hover-image"
+              />
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://o-vilna.github.io/otsur-js-app/" target="_blank"
+              >Live Demo</a
+            >
+            <a href="https://github.com/o-vilna/otsur-js-app" target="_blank"
+              >GitHub Repository</a
+            >
+          </div>
         </div>
         <div class="grid__item">
-          <div class="overlay"></div>
-          <h6 class="custom-heading">Your project</h6>
-          <p>
-            I can help in realizing front-end and back-end projects with the
-            following technologies: React.js, JavaScript, Java, JavaFX, HTML and
-            CSS. I am also happy to learn other technologies if needed.
-          </p>
-          <a href="#">Contact me</a>
+          <h2 class="custom-heading">myFlix Angular App</h2>
+          <div class="project-image-container">
+            <div class="project-info">
+              <p>
+                A single-page, responsive movie application built with Angular
+                that connects to a REST API backend. The app allows users to
+                browse movies, view details about movies, directors, and genres,
+                create a favorites list, and manage their profile.
+              </p>
+              <p>
+                <strong>Technologies:</strong> Angular, TypeScript, Angular
+                Material, RxJS, Node.js, JSDoc/TypeDoc, REST API integration
+              </p>
+            </div>
+            <div class="overlay">
+              <img
+                src="./img/myflix-angular-screenshot.png"
+                alt="myFlix Angular App Screenshot"
+                class="project-hover-image"
+              />
+            </div>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://o-vilna.github.io/myFlix-Angular-client/welcome"
+              target="_blank"
+              >Live Demo</a
+            >
+            <a
+              href="https://github.com/o-vilna/myFlix-Angular-client"
+              target="_blank"
+              >GitHub Repository</a
+            >
+          </div>
+        </div>
+        <div class="grid__item">
+          <h2 class="custom-heading">Your Next Project</h2>
+          <div class="project-image-container">
+            <div class="project-info">
+              <p>
+                I can help realize your vision by implementing front-end and
+                back-end solutions using my expertise in modern web
+                technologies. My tech stack includes:
+              </p>
+              <ul style="text-align: left; padding-left: 20px">
+                <li>
+                  <strong>Front-end:</strong> React, JavaScript (ES6+), HTML5,
+                  CSS3, Responsive Design
+                </li>
+                <li><strong>Mobile:</strong> React Native, Expo</li>
+                <li><strong>Back-end:</strong> Node.js, Express, Firebase</li>
+                <li><strong>Database:</strong> MongoDB, Firebase Firestore</li>
+                <li><strong>Testing:</strong> Jest, React Testing Library</li>
+                <li><strong>DevOps:</strong> Git, GitHub, AWS</li>
+              </ul>
+              <p>
+                I'm always eager to learn new technologies and frameworks to
+                deliver the best solutions for your specific needs.
+              </p>
+            </div>
+            <div class="overlay">
+              <!-- Залишено без зображення -->
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="contact.html">Contact me</a>
+          </div>
         </div>
       </div>
     </section>
     <!--Footer with links to social media profiles-->
     <footer class="page-footer">
-      <div class="find me">
+      <div class="find-me">
         <p>Find me on</p>
       </div>
       <div class="social icons">
