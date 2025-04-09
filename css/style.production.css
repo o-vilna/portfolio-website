@@ -14,6 +14,26 @@ Background Color: #ffffff
 Text Color: #2b2b2b
 */
 
+:root {
+  --primary-color: #348378;
+  --primary-dark: #2a6b62;
+  --secondary-color: #2b2b2b;
+  --text-dark: #2b2b2b;
+  --text-medium: #444;
+  --text-light: #666;
+  --text-lighter: #666;
+  --border-color: #eee;
+  --background-light: #f8f8f8;
+  --background-white: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --github-color: #24292e;
+  --github-hover: #1a1f23;
+  --details-color: #5c6bc0;
+  --details-hover: #4a59b0;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --transition: all 0.3s ease;
+}
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -187,11 +207,9 @@ h3 {
 
 /* Grid layout for work page */
 .grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 25px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
@@ -244,20 +262,20 @@ h3 {
 }
 
 .grid__item {
-  background-color: #f8f8f8;
+  background-color: #fff;
   border-radius: 8px;
-  padding: 12px;
-  position: relative;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100%;
+  min-height: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .grid__item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .grid__item p {
@@ -578,22 +596,55 @@ h3 {
 }
 
 /* General button styling */
-button {
-  border: none;
-  font-family: inherit;
+.button,
+.cta-button,
+.project-link,
+.submit-button {
+  display: inline-block;
   background-color: #348378;
   color: white;
+  font-weight: 500;
+  padding: 6px 12px;
   text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  border: none;
   cursor: pointer;
 }
 
-button:hover,
-button:focus {
+.button:hover,
+.cta-button:hover,
+.project-link:hover,
+.submit-button:hover {
   background-color: #2b6357;
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button.secondary,
+.cta-button.secondary {
+  background-color: transparent;
+  border: 1px solid #348378;
+  color: #348378;
+}
+
+.button.secondary:hover,
+.cta-button.secondary:hover {
+  background-color: rgba(52, 131, 120, 0.1);
+}
+
+/* Адаптивність для малих екранів */
+@media all and (max-width: 550px) {
+  .button,
+  .cta-button,
+  .project-link,
+  .submit-button {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
 }
 
 a {
@@ -671,103 +722,145 @@ section {
 
 /* Оновлені стилі для зображень проєктів */
 .project-image-container {
-  margin: 5px 0;
-  overflow: hidden;
-  border-radius: 4px;
   position: relative;
-  flex-grow: 1;
+  overflow: hidden;
+  height: 180px;
+  width: 100%;
 }
 
 .project-image {
-  display: block;
   width: 100%;
-  height: auto;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-/* Показуємо оверлей для карток з проектами */
-.overlay {
+.project-image-container:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* Оверлей з детальним описом */
+.project-info {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.97);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: rgba(52, 131, 120, 0.9);
+  color: white;
+  padding: 20px;
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 10;
-  pointer-events: none;
-  padding: 20px;
-}
-
-.grid__item:hover .overlay {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.project-hover-image {
-  max-width: 90%;
-  max-height: 90%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Додаткові стилі для підтримки показу скріншотів при наведенні */
-.project-info {
-  transition: opacity 0.3s ease;
+  overflow-y: auto;
   display: flex;
-  flex-direction: column;
-  min-height: 160px;
-  justify-content: flex-start;
-  gap: 3px;
+  align-items: center;
 }
 
-.grid__item:hover .project-info {
-  opacity: 0.8;
+.project-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
 }
 
-/* Показуємо повну картинку при кліці на оверлей */
-.overlay:active .project-hover-image {
-  max-width: 100%;
-  max-height: 100%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100;
+.project-image-container:hover .project-info {
+  opacity: 1;
 }
 
-/* Додамо анімацію появи */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
+/* Стандартизація блоку з описом */
+.project-description {
+  padding: 15px 20px 5px;
+  min-height: 80px;
+}
+
+.project-description p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #444;
+  margin: 0;
+}
+
+/* Стандартизація блоку з технологіями */
+.project-tech {
+  padding: 5px 20px 15px;
+  min-height: 60px;
+}
+
+.project-tech p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.project-tech strong {
+  color: #348378;
+}
+
+/* Стандартизація блоку з посиланнями */
+.project-links {
+  margin-top: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.welcome-text .button {
+  font-size: 14px;
+  padding: 6px 12px;
+  margin-top: 15px;
+  width: auto;
+  display: inline-block;
+}
+
+.github-link {
+  background-color: #24292e;
+  color: white;
+}
+
+.github-link:hover {
+  background-color: #1a1f23;
+}
+
+.demo-link {
+  background-color: #348378;
+  color: white;
+}
+
+.demo-link:hover {
+  background-color: #2a6b62;
+}
+
+.details-link {
+  background-color: #5c6bc0;
+  color: white;
+}
+
+.details-link:hover {
+  background-color: #4a59b0;
+}
+
+/* Адаптивність для різних екранів */
+@media all and (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
-  to {
-    opacity: 1;
-    transform: scale(1);
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
   }
-}
 
-.grid__item:hover .project-hover-image {
-  animation: fadeIn 0.3s ease forwards;
-}
+  .project-links {
+    flex-direction: column;
+    align-items: center;
+  }
 
-/* Більш специфічний селектор замість !important */
-body section h1.work.custom-heading {
-  font-size: 32px;
-  margin-top: 40px;
-  margin-bottom: 30px;
-  border-bottom: none;
-  padding-bottom: 0;
+  .button {
+    padding: 6px 14px;
+    font-size: 15px;
+  }
 }
 
 /* Спеціальний стиль для скріншоту ChatApp */
@@ -895,12 +988,12 @@ img[alt="ChatApp Screenshot"] {
   background-color: #348378;
   color: white;
   font-weight: 500;
-  padding: 10px 20px;
+  padding: 8px 16px;
   text-decoration: none;
   border-radius: 4px;
   font-size: 16px;
   transition: background-color 0.3s ease;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   margin-top: 15px;
 }
 
@@ -909,6 +1002,8 @@ img[alt="ChatApp Screenshot"] {
   background-color: #2b6357;
   color: white;
   text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Уніфікований стиль для всіх головних заголовків замість дублювання */
@@ -987,4 +1082,558 @@ h1 {
 
 .grid__item li {
   margin-bottom: 4px;
+}
+
+/* Далі замініть усі кольори на змінні, наприклад: */
+.project-title {
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.project-description p {
+  color: var(--text-medium);
+}
+
+.github-link {
+  background-color: var(--github-color);
+  color: var(--background-white);
+}
+
+.github-link:hover {
+  background-color: var(--github-hover);
+}
+
+/* Загальні стилі для сторінки About */
+.about-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+.about-page h1 {
+  font-size: 36px;
+  color: var(--text-dark);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.about-page h2 {
+  font-size: 28px;
+  color: var(--primary-color);
+  margin: 40px 0 20px;
+  font-weight: 600;
+}
+
+.about-page h3 {
+  font-size: 22px;
+  color: var(--text-dark);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.about-page p {
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+/* Вступний текст */
+.welcome-intro {
+  font-size: 20px;
+  color: var(--primary-color);
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.about-intro {
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-bio {
+  text-align: left;
+}
+
+/* Стилі для секції навичок з сіткою */
+.skills-section {
+  background-color: var(--background-alt);
+  padding: 30px 40px 40px;
+  border-radius: 8px;
+  margin-bottom: 60px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.skills-section h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+  font-size: 28px;
+}
+
+/* Сітка навичок */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+  justify-items: center;
+}
+
+/* Елемент навички */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+  width: 90px; /* Фіксована ширина для рівномірного розташування */
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+}
+
+.skill-item img {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.skill-item span {
+  font-size: 14px;
+  color: var(--text-medium);
+  line-height: 1.3;
+}
+
+/* Адаптивність для малих екранів */
+@media screen and (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 20px;
+  }
+
+  .skill-item {
+    width: 80px;
+  }
+
+  .skill-item img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 15px;
+  }
+
+  .skill-item {
+    width: 70px;
+  }
+
+  .skill-item img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .skill-item span {
+    font-size: 12px;
+  }
+}
+
+/* Оновлені стилі для секції інтересів зі зменшеними відступами */
+.interests-section {
+  background-color: var(--background-alt);
+  padding: 30px 35px 35px; /* Зменшено верхній відступ */
+  border-radius: 8px;
+  margin-bottom: 60px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.interests-section h2 {
+  margin-top: 0; /* Додано нульовий верхній відступ */
+  margin-bottom: 15px; /* Зберігаємо зменшений нижній відступ */
+  color: var(--primary-color);
+}
+
+.interests-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 0; /* Прибираємо верхній відступ контенту */
+  text-align: left;
+}
+
+.interests-content p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text-medium);
+  text-align: left;
+  margin-top: 0; /* Забезпечуємо відсутність верхнього відступу параграфа */
+}
+
+/* Скориговані стилі для секції "Let's Work Together" */
+.cta-section {
+  padding: 30px 35px 35px; /* Зменшено верхній відступ */
+  background-color: var(--background-alt);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  text-align: center; /* Центральне вирівнювання для секції */
+  margin-bottom: 60px;
+}
+
+.cta-section h2 {
+  color: var(--primary-color);
+  margin-top: 0; /* Відсутність верхнього відступу */
+  margin-bottom: 15px;
+  text-align: center; /* Заголовок залишається по центру */
+}
+
+.cta-section p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text-medium);
+  text-align: left; /* Текст абзацу вирівняно по лівому краю */
+  max-width: 700px;
+  margin: 0 auto 25px; /* Центруємо блок параграфа, але текст залишається по лівому краю */
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center; /* Центруємо кнопки */
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.cta-button:hover {
+  background-color: #2a6b62;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* Адаптивність для малих екранів */
+@media screen and (max-width: 600px) {
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .cta-button {
+    width: auto;
+    min-width: 120px;
+  }
+}
+
+/* Стилі для іконок соціальних мереж у футері */
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-media a {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-media a:hover {
+  transform: scale(1.2);
+}
+
+.social-media img {
+  height: 100%;
+  width: 100%;
+}
+/* Сучасні стилі для сітки проєктів */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Стилі для карток проєктів */
+.project-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Заголовок проєкту */
+.project-title {
+  padding: 16px 20px;
+  margin: 0;
+  font-size: 20px;
+  color: #2b2b2b;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+/* Контейнер для зображення */
+.project-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* Оверлей при наведенні */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(52, 131, 120, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+}
+
+.project-image-container:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-details {
+  color: white;
+}
+
+.project-details p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Опис проєкту */
+.project-description {
+  padding: 15px 20px;
+  flex-grow: 1;
+}
+
+.project-description p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Технології */
+.project-tech {
+  padding: 0 20px 15px;
+}
+
+.project-tech h3 {
+  font-size: 16px;
+  color: #348378;
+  margin: 0 0 5px;
+  font-weight: 600;
+}
+
+.project-tech p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Посилання */
+.project-links {
+  padding: 15px 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  border-top: 1px solid #eee;
+  background-color: #f9f9f9;
+}
+
+.project-btn {
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.github-btn {
+  background-color: #24292e;
+  color: white;
+}
+
+.github-btn:hover {
+  background-color: #1a1f23;
+}
+
+.live-btn {
+  background-color: #348378;
+  color: white;
+}
+
+.live-btn:hover {
+  background-color: #2a6b62;
+}
+
+.disabled-btn {
+  background-color: #ddd;
+  color: #888;
+  cursor: not-allowed;
+  opacity: 0.7;
+  border: none;
+}
+
+.disabled-btn:hover {
+  background-color: #ddd;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Адаптивність для різних екранів */
+@media screen and (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-title {
+    font-size: 18px;
+    padding: 14px 16px;
+  }
+
+  .project-image-container {
+    height: 180px;
+  }
+}
+
+/* Стиль для неактивної кнопки Live Demo */
+.disabled-live-btn {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+  position: relative;
+}
+
+.disabled-live-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+}
+
+/* Прибираємо ефекти при наведенні для неактивної кнопки */
+.disabled-live-btn:hover {
+  background-color: #348378;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Покращений стиль для кнопки Discuss Project */
+.next-btn {
+  background-color: #348378;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.next-btn:hover {
+  background-color: #2a6b62;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(42, 107, 98, 0.3);
+}
+
+.next-btn:active {
+  transform: scale(0.98);
+}
+
+/* Встановлюємо фіксовану мінімальну висоту для блоку технологій у всіх картках */
+.project-tech {
+  min-height: 80px; /* Налаштуйте значення відповідно до ваших потреб */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Гарантуємо, що блоки посилань будуть вирівняні на одному рівні */
+.project-links {
+  margin-top: auto;
+}
+
+/* Забезпечуємо гнучку структуру для карток */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Опис проєкту може мати різну висоту, але не впливатиме на вирівнювання технологій */
+.project-description {
+  flex-grow: 1;
 }

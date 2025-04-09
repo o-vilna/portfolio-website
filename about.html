@@ -54,165 +54,179 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <div class="about-content">
-        <div class="about-intro">
+    <main class="about-page">
+      <!-- Вступна секція -->
+      <section class="about-intro">
+        <div class="about-header">
           <h1>About Me</h1>
         </div>
 
-        <h2>How I became a web developer</h2>
-        <p>
-          After 13 years in Telecom Engineering, I decided to pivot my career
-          towards web development.
-        </p>
-        <p>
-          I enrolled in online coding courses, mastered front-end and back-end
-          technologies, and built a portfolio of projects.
-        </p>
-        <p>
-          This transition allowed me to leverage my problem-solving skills and
-          analytical mindset in a new field.
-        </p>
+        <div class="about-bio">
+          <p>
+            I'm Olha Tsurenko, a web developer based in Berlin. With a
+            background in telecommunications engineering, I've transitioned to
+            web development, focusing on creating responsive and user-friendly
+            applications.
+          </p>
+          <p>
+            My journey from telecommunications to web development has equipped
+            me with a unique perspective on building robust, efficient
+            applications that solve real-world problems.
+          </p>
+        </div>
+      </section>
 
-        <h2>Skills& Technologies</h2>
-        <table class="skills-table">
-          <tr>
-            <th>Frontend</th>
-            <th>Backend</th>
-            <th>Database</th>
-            <th>Development Tools</th>
-          </tr>
-          <tr>
-            <td>
-              <strong>Frameworks:</strong><br />
-              React<br />
-              Angular<br />
-              React Native<br />
-              <br />
-              <strong>Libraries:</strong><br />
-              React Router<br />
-              React Redux<br />
-              Angular Material<br />
-              Bootstrap<br />
-              Chart.js/Recharts<br />
-              Gifted Chat<br />
-              <br />
-              <strong>Languages:</strong><br />
-              HTML<br />
-              CSS<br />
-              JavaScript
-            </td>
-            <td>
-              <strong>Frameworks:</strong><br />
-              Node.js<br />
-              Express<br />
-              Expo<br />
-              <br />
-              <strong>Architecture:</strong><br />
-              REST API<br />
-              <br />
-              <strong>Services:</strong><br />
-              AWS Lambda<br />
-              Google Calendar API<br />
-              Firebase Services<br />
-              <br />
-              <strong>Features:</strong><br />
-              Service Workers<br />
-              Geolocation/Maps
-            </td>
-            <td>
-              <strong>NoSQL:</strong><br />
-              MongoDB<br />
-              Firestore<br />
-              <br />
-              <strong>Storage:</strong><br />
-              Firebase Cloud Storage<br />
-              <br />
-              <strong>SQL:</strong><br />
-              PostgreSQL<br />
-              <br />
-              <strong>Local Storage:</strong><br />
-              AsyncStorage
-            </td>
-            <td>
-              <strong>Version Control:</strong><br />
-              Git<br />
-              GitHub<br />
-              <br />
-              <strong>Package Managers:</strong><br />
-              npm<br />
-              <br />
-              <strong>Tools:</strong><br />
-              VS Code<br />
-              Parcel (Build Tool)<br />
-              Vite (Build Tool)<br />
-              <br />
-              <strong>Testing:</strong><br />
-              Jest/Enzyme<br />
-              <br />
-              <strong>Deployment:</strong><br />
-              Vercel<br />
-              Firebase Hosting<br />
-              <br />
-              <strong>Design:</strong><br />
-              Responsive Design<br />
-              Mobile UI Design
-            </td>
-          </tr>
-        </table>
+      <!-- Навички з іконками в сітці без категорій -->
+      <section class="skills-section">
+        <h2>Skills & Technologies</h2>
 
-        <h2>Professional Mission</h2>
-        <p>
-          My mission is delivering high-quality solutions to create impactful
-          web applications.
-        </p>
+        <div class="skills-grid">
+          <!-- Frontend -->
+          <div class="skill-item">
+            <img src="img/skills/html.svg" alt="HTML5" />
+            <span>HTML5</span>
+          </div>
+          <div class="skill-item">
+            <img src="img/skills/css.svg" alt="CSS3" />
+            <span>CSS3</span>
+          </div>
+          <div class="skill-item">
+            <img src="img/skills/js.svg" alt="JavaScript" />
+            <span>JavaScript</span>
+          </div>
+          <div class="skill-item">
+            <img src="img/skills/jquery.svg" alt="jQuery" />
+            <span>jQuery</span>
+          </div>
+          <div class="skill-item">
+            <img src="img/skills/react.svg" alt="React" />
+            <span>React</span>
+          </div>
+          <div class="skill-item">
+            <img src="img/skills/angular.svg" alt="Angular" />
+            <span>Angular</span>
+          </div>
+          <div class="skill-item">
+            <img src="img/skills/bootstrap.svg" alt="Bootstrap" />
+            <span>Bootstrap</span>
+          </div>
 
-        <h2>Work Experience</h2>
-        <p>
-          I have over 13 years of experience working in telecommunications
-          companies as an engineer by my first profession. This background has
-          provided me with strong technical skills and the ability to work
-          effectively in diverse teams of various sizes.
-        </p>
+          <!-- Backend -->
+          <div class="skill-item">
+            <img src="img/skills/node.svg" alt="Node.js" />
+            <span>Node.js</span>
+          </div>
+          <div class="skill-item">
+            <img src="img/skills/express.svg" alt="Express" />
+            <span>Express</span>
+          </div>
+          <div class="skill-item">
+            <img src="img/skills/restapi.svg" alt="RESTful APIs" />
+            <span>RESTful APIs</span>
+          </div>
+          <div class="skill-item">
+            <img src="img/skills/firebase.svg" alt="Firebase" />
+            <span>Firebase</span>
+          </div>
 
-        <h2>My Interests and Hobbies</h2>
+          <!-- Database -->
+          <div class="skill-item">
+            <img src="img/skills/mongodb.svg" alt="MongoDB" />
+            <span>MongoDB</span>
+          </div>
+          <div class="skill-item">
+            <img src="img/skills/postgresql.svg" alt="PostgreSQL" />
+            <span>PostgreSQL</span>
+          </div>
+
+          <!-- Tools & Platforms -->
+          <div class="skill-item">
+            <img src="img/skills/git.svg" alt="Git" />
+            <span>Git</span>
+          </div>
+          <div class="skill-item">
+            <img src="img/skills/github.svg" alt="GitHub" />
+            <span>GitHub</span>
+          </div>
+          <div class="skill-item">
+            <img src="img/skills/npm.svg" alt="npm" />
+            <span>npm</span>
+          </div>
+          <div class="skill-item">
+            <img src="img/skills/vscode.svg" alt="VS Code" />
+            <span>VS Code</span>
+          </div>
+          <div class="skill-item">
+            <img src="img/skills/parcel.svg" alt="Parcel" />
+            <span>Parcel</span>
+          </div>
+          <div class="skill-item">
+            <img src="img/skills/jest.svg" alt="Jest" />
+            <span>Jest</span>
+          </div>
+
+          <!-- Methodologies & Standards -->
+          <div class="skill-item">
+            <img src="img/skills/responsive.svg" alt="Responsive Design" />
+            <span>Responsive Design</span>
+          </div>
+          <div class="skill-item">
+            <img src="img/skills/w3c.svg" alt="Web Accessibility" />
+            <span>Web Accessibility</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Інтереси та хобі (відцентровано) -->
+      <section class="interests-section">
+        <h2>Interests & Hobbies</h2>
+
+        <div class="interests-content">
+          <p>
+            When I'm not coding, I enjoy gardening and baking. I find these
+            activities allow me to balance the technical work with creative
+            expression and natural connection.
+          </p>
+        </div>
+      </section>
+
+      <!-- Заклик до дії з контекстом -->
+      <section class="cta-section">
+        <h2>Let's Work Together</h2>
         <p>
-          When I'm not working, you can find me in my garden planting flowers,
-          or reading books with my children.
+          I'm always open to discussing new projects, creative ideas, or
+          opportunities to be part of your vision. Feel free to reach out
+          through my contact form or social media profiles.
         </p>
-        <p>I'm also passionate about baking.</p>
-      </div>
+        <div class="cta-buttons">
+          <a href="contact.html" class="cta-button">Get In Touch</a>
+          <a href="work.html" class="cta-button secondary">View My Work</a>
+        </div>
+      </section>
     </main>
     <footer class="page-footer">
-      <div class="find-me">
-        <p>Find me on</p>
-      </div>
-      <div class="social icons">
-        <!--Github logo-->
-        <a
-          class="social-icon-links"
-          href="https://github.com/o-vilna"
-          target="_blank"
-        >
-          <img src="./img/github.svg" class="icon" alt="Github" />
+      <p>Find me on</p>
+      <div class="social-media">
+        <a href="https://github.com/o-vilna" target="_blank">
+          <img src="img/github.svg" alt="Github" />
         </a>
-        <!--LinkedIn logo-->
         <a
-          class="social-icon-links"
           href="https://www.linkedin.com/in/olha-tsurenko-24b36951/"
           target="_blank"
         >
-          <img src="./img/mylinkedin.svg" class="icon" alt="LinkedIn" />
+          <img src="img/linkedin.svg" alt="LinkedIn" />
         </a>
-        <!--Facebook logo-->
-        <a
-          class="social-icon-links"
-          href="https://www.facebook.com/profile.phd/?id=100000603968886"
-          target="_blank"
-        >
-          <img src="./img/facebook.svg" class="icon" alt="Facebook" />
+        <a href="https://www.facebook.com/olga.tsurenko/" target="_blank">
+          <img src="img/facebook.svg" alt="Facebook" />
+        </a>
+        <a href="https://medium.com/@olga.tsurenko" target="_blank">
+          <img src="img/medium.svg" alt="Medium" />
+        </a>
+        <a href="https://x.com/OlHaTsur" target="_blank">
+          <img src="img/x.svg" alt="Twitter/X" />
         </a>
       </div>
+      <p>&copy; 2025 Olha Tsurenko</p>
     </footer>
     <div class="back-to-top-button">
       <button onclick="window.scrollTo(0, 0)">Back to top</button>

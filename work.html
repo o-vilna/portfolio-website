@@ -62,242 +62,345 @@
       <div>
         <h1 class="work custom-heading">Work</h1>
       </div>
-      <div class="grid">
-        <!--Grid items will live here-->
-        <div class="grid__item">
-          <h2 class="custom-heading">Meet App</h2>
+      <div class="project-grid">
+        <!-- Приклад структури картки проєкту (повторіть для кожного проєкту) -->
+        <div class="project-card">
+          <!-- Заголовок проєкту -->
+          <h2 class="project-title">Meet App</h2>
+
+          <!-- Скріншот проєкту -->
           <div class="project-image-container">
-            <div class="project-info">
-              <p>
-                A serverless, progressive web application (PWA) built with React
-                using a test-driven development (TDD) approach. The application
-                fetches upcoming events from the Google Calendar API and
-                provides an interactive, data-driven user experience.
-              </p>
-              <p>
-                <strong>Technologies:</strong> React, AWS Lambda, OAuth2,
-                Service Workers, Recharts, Jest, React Testing Library.
-              </p>
-            </div>
-            <div class="overlay">
-              <img
-                src="./img/meet-app-screenshot.png"
-                alt="Meet App Screenshot"
-                class="project-hover-image"
-              />
+            <img
+              src="img/meet-app-screenshot.png"
+              alt="Meet App"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <div class="project-details">
+                <ul>
+                  <li>Data visualization with charts</li>
+                  <li>Offline functionality with service workers</li>
+                  <li>Progressive Web App capabilities</li>
+                  <li>Google Calendar API integration</li>
+                  <li>Serverless functions with AWS Lambda</li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="project-links">
-            <a href="https://meet-brown.vercel.app/" target="_blank"
-              >Live Demo</a
-            >
-            <a href="https://github.com/o-vilna/meet" target="_blank"
-              >GitHub Repository</a
-            >
+
+          <!-- Опис проєкту -->
+          <div class="project-description">
+            <p>
+              A serverless React PWA that fetches and displays Google Calendar
+              events with interactive data visualization.
+            </p>
           </div>
-        </div>
-        <div class="grid__item">
-          <h2 class="custom-heading">Chat App</h2>
-          <div class="project-image-container">
-            <div class="project-info">
-              <p>
-                A mobile chat application built with React Native that enables
-                users to exchange messages, share images, and locations in
-                real-time with offline support.
-              </p>
-              <p>
-                <strong>Technologies:</strong> React Native, Expo, Firebase
-                (Firestore, Authentication, Cloud Storage), Gifted Chat Library,
-                AsyncStorage
-              </p>
-            </div>
-            <div class="overlay">
-              <img
-                src="./img/chatapp-screenshot.png"
-                alt="ChatApp Screenshot"
-                class="project-hover-image"
-              />
-            </div>
+
+          <!-- Використані технології -->
+          <div class="project-tech">
+            <h3>Technologies used:</h3>
+            <p>
+              React, Vite, AWS Lambda, Google Calendar API, Service Workers,
+              Chart.js/Recharts, Jest/Enzyme, GitHub, Vercel
+            </p>
           </div>
-          <div class="project-links">
-            <a href="https://github.com/o-vilna/ChatApp" target="_blank"
-              >GitHub Repository</a
-            >
-          </div>
-        </div>
-        <div class="grid__item">
-          <h2 class="custom-heading">myFlix React App</h2>
-          <div class="project-image-container">
-            <div class="project-info">
-              <p>
-                A MERN stack movie application with React frontend and
-                Node.js/Express backend. Users can browse movies, create
-                accounts, add favorites, and view details about films,
-                directors, and genres.
-              </p>
-              <p>
-                <strong>Frontend:</strong> React, React Bootstrap, React Router,
-                Parcel
-              </p>
-              <p>
-                <strong>Backend:</strong> Node.js, Express, MongoDB, JWT
-                Authentication, Passport, Mongoose
-              </p>
-            </div>
-            <div class="overlay">
-              <img
-                src="./img/myflix-react-screenshot.png"
-                alt="myFlix React App Screenshot"
-                class="project-hover-image"
-              />
-            </div>
-          </div>
-          <div class="project-links">
-            <a href="https://m-flixx.netlify.app/login" target="_blank"
-              >Live Demo</a
-            >
-            <a href="https://github.com/o-vilna/MyFlix-client" target="_blank"
-              >Frontend Repo</a
-            >
-            <a href="https://github.com/o-vilna/movie_api" target="_blank"
-              >Backend Repo</a
-            >
-          </div>
-        </div>
-        <div class="grid__item">
-          <h2 class="custom-heading">Pokédex App</h2>
-          <div class="project-image-container">
-            <div class="project-info">
-              <p>
-                This web application allows users to browse and search for
-                Pokémon using the PokeAPI. Users can click on any Pokémon in the
-                list to view detailed information in an interactive modal
-                window.
-              </p>
-              <p>
-                <strong>Technologies:</strong> HTML5, CSS3, JavaScript (ES6+),
-                Fetch API, ESLint, Responsive Design
-              </p>
-            </div>
-            <div class="overlay">
-              <img
-                src="./img/pokedex-screenshot.png"
-                alt="Pokédex App Screenshot"
-                class="project-hover-image"
-              />
-            </div>
-          </div>
-          <div class="project-links">
-            <a href="https://o-vilna.github.io/otsur-js-app/" target="_blank"
-              >Live Demo</a
-            >
-            <a href="https://github.com/o-vilna/otsur-js-app" target="_blank"
-              >GitHub Repository</a
-            >
-          </div>
-        </div>
-        <div class="grid__item">
-          <h2 class="custom-heading">myFlix Angular App</h2>
-          <div class="project-image-container">
-            <div class="project-info">
-              <p>
-                A single-page, responsive movie application built with Angular
-                that connects to a REST API backend. The app allows users to
-                browse movies, view details about movies, directors, and genres,
-                create a favorites list, and manage their profile.
-              </p>
-              <p>
-                <strong>Technologies:</strong> Angular, TypeScript, Angular
-                Material, RxJS, Node.js, JSDoc/TypeDoc, REST API integration
-              </p>
-            </div>
-            <div class="overlay">
-              <img
-                src="./img/myflix-angular-screenshot.png"
-                alt="myFlix Angular App Screenshot"
-                class="project-hover-image"
-              />
-            </div>
-          </div>
+
+          <!-- Посилання -->
           <div class="project-links">
             <a
-              href="https://o-vilna.github.io/myFlix-Angular-client/welcome"
+              href="https://github.com/o-vilna/meet"
               target="_blank"
+              class="project-btn github-btn"
+              >GitHub</a
+            >
+            <a
+              href="https://meet-brown.vercel.app/"
+              target="_blank"
+              class="project-btn live-btn"
               >Live Demo</a
             >
+          </div>
+        </div>
+
+        <!-- myFlix React картка -->
+        <div class="project-card">
+          <h2 class="project-title">myFlix React App</h2>
+
+          <div class="project-image-container">
+            <img
+              src="img/myflix-react-screenshot.png"
+              alt="myFlix React App"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <div class="project-details">
+                <ul>
+                  <li>User registration and authentication</li>
+                  <li>Browse and search movie collection</li>
+                  <li>Add/remove favorites and manage profile</li>
+                  <li>Responsive UI with React Bootstrap</li>
+                  <li>JWT token-based security</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-description">
+            <p>
+              A React client application for a movie database API with user
+              authentication and profile management.
+            </p>
+          </div>
+
+          <div class="project-tech">
+            <h3>Technologies used:</h3>
+            <p>
+              React, React Router, Bootstrap, Node.js, Express, MongoDB, Parcel,
+              React Redux
+            </p>
+          </div>
+
+          <div class="project-links">
+            <a
+              href="https://github.com/o-vilna/myFlix-client"
+              target="_blank"
+              class="project-btn github-btn"
+              >GitHub</a
+            >
+            <a
+              href="https://m-flixx.netlify.app/"
+              target="_blank"
+              class="project-btn live-btn"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+
+        <!-- myFlix Angular картка -->
+        <div class="project-card">
+          <h2 class="project-title">myFlix Angular App</h2>
+
+          <div class="project-image-container">
+            <img
+              src="img/myflix-angular-screenshot.png"
+              alt="myFlix Angular App"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <div class="project-details">
+                <ul>
+                  <li>Angular Material UI components</li>
+                  <li>TypeScript for type safety</li>
+                  <li>RxJS for reactive programming</li>
+                  <li>User profile management</li>
+                  <li>Favorites functionality</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-description">
+            <p>
+              Angular-based client for the myFlix API that offers user
+              authentication, movie browsing, and profile functionality within a
+              TypeScript environment.
+            </p>
+          </div>
+
+          <div class="project-tech">
+            <h3>Technologies used:</h3>
+            <p>Angular, TypeScript, Angular Material, RxJS, Node.js</p>
+          </div>
+
+          <div class="project-links">
             <a
               href="https://github.com/o-vilna/myFlix-Angular-client"
               target="_blank"
-              >GitHub Repository</a
+              class="project-btn github-btn"
+              >GitHub</a
+            >
+            <a
+              href="https://o-vilna.github.io/myFlix-Angular-client/welcome"
+              target="_blank"
+              class="project-btn live-btn"
+              >Live Demo</a
             >
           </div>
         </div>
-        <div class="grid__item">
-          <h2 class="custom-heading">Your Next Project</h2>
+
+        <!-- ChatApp картка -->
+        <div class="project-card">
+          <h2 class="project-title">ChatApp</h2>
+
           <div class="project-image-container">
-            <div class="project-info">
-              <p>
-                I can help realize your vision by implementing front-end and
-                back-end solutions using my expertise in modern web
-                technologies. My tech stack includes:
-              </p>
-              <ul style="text-align: left; padding-left: 20px">
-                <li>
-                  <strong>Front-end:</strong> React, JavaScript (ES6+), HTML5,
-                  CSS3, Responsive Design
-                </li>
-                <li><strong>Mobile:</strong> React Native, Expo</li>
-                <li><strong>Back-end:</strong> Node.js, Express, Firebase</li>
-                <li><strong>Database:</strong> MongoDB, Firebase Firestore</li>
-                <li><strong>Testing:</strong> Jest, React Testing Library</li>
-                <li><strong>DevOps:</strong> Git, GitHub, AWS</li>
-              </ul>
-              <p>
-                I'm always eager to learn new technologies and frameworks to
-                deliver the best solutions for your specific needs.
-              </p>
-            </div>
-            <div class="overlay">
-              <!-- Залишено без зображення -->
+            <img
+              src="img/chatapp-screenshot.png"
+              alt="ChatApp"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <div class="project-details">
+                <ul>
+                  <li>Real-time messaging with Firestore</li>
+                  <li>Image sharing from gallery or camera</li>
+                  <li>Location sharing integration</li>
+                  <li>Offline access to message history</li>
+                  <li>Cross-platform compatibility</li>
+                </ul>
+              </div>
             </div>
           </div>
+
+          <div class="project-description">
+            <p>
+              Mobile chat application that enables users to exchange messages,
+              share images and locations. Works both online and offline with
+              data persistence.
+            </p>
+          </div>
+
+          <div class="project-tech">
+            <h3>Technologies used:</h3>
+            <p>
+              React Native, Expo, Firebase, Firestore, Gifted Chat, AsyncStorage
+            </p>
+          </div>
+
           <div class="project-links">
-            <a href="contact.html">Contact me</a>
+            <a
+              href="https://github.com/o-vilna/ChatApp"
+              target="_blank"
+              class="project-btn github-btn"
+              >GitHub</a
+            >
+            <button class="project-btn live-btn disabled-live-btn" disabled>
+              Live Demo
+            </button>
+          </div>
+        </div>
+
+        <!-- Pokédex картка -->
+        <div class="project-card">
+          <h2 class="project-title">Pokédex App</h2>
+
+          <div class="project-image-container">
+            <img
+              src="img/pokedex-screenshot.png"
+              alt="Pokédex App"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <div class="project-details">
+                <ul>
+                  <li>PokeAPI integration for comprehensive data</li>
+                  <li>Interactive search functionality</li>
+                  <li>Modal windows for detailed information</li>
+                  <li>Responsive design for all devices</li>
+                  <li>Error handling and loading states</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-description">
+            <p>
+              This web application allows users to browse and search for Pokémon
+              using the PokeAPI. Users can click on any Pokémon in the list to
+              view detailed information in an interactive modal window.
+            </p>
+          </div>
+
+          <div class="project-tech">
+            <h3>Technologies used:</h3>
+            <p>
+              HTML5, CSS3, JavaScript (ES6+), Fetch API, ESLint, Responsive
+              Design
+            </p>
+          </div>
+
+          <div class="project-links">
+            <a
+              href="https://github.com/o-vilna/otsur-js-app"
+              target="_blank"
+              class="project-btn github-btn"
+              >GitHub</a
+            >
+            <a
+              href="https://o-vilna.github.io/otsur-js-app/"
+              target="_blank"
+              class="project-btn live-btn"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+
+        <!-- Your Next Project картка -->
+        <div class="project-card next-project">
+          <h2 class="project-title">Your Next Project</h2>
+
+          <div class="project-image-container">
+            <img
+              src="img/your project.jpg"
+              alt="Your Next Project"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <div class="project-details">
+                <ul>
+                  <li>Frontend and backend development</li>
+                  <li>Responsive and accessible design</li>
+                  <li>Clean, maintainable code</li>
+                  <li>Modern UI/UX implementation</li>
+                  <li>Collaborative problem-solving</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-description">
+            <p>
+              Looking for a developer for your web project? I'm always open to
+              new challenges and exciting ideas.
+            </p>
+          </div>
+
+          <div class="project-tech">
+            <h3>Possible technologies:</h3>
+            <p>JavaScript, React, Angular, Node.js, MongoDB, HTML/CSS</p>
+          </div>
+
+          <div class="project-links">
+            <a href="contact.html" class="project-btn next-btn"
+              >Discuss Project</a
+            >
           </div>
         </div>
       </div>
     </section>
     <!--Footer with links to social media profiles-->
     <footer class="page-footer">
-      <div class="find-me">
-        <p>Find me on</p>
-      </div>
-      <div class="social icons">
-        <!--Github logo-->
-        <a
-          class="social-icon-links"
-          href="https://github.com/o-vilna"
-          target="_blank"
-        >
-          <img src="./img/github.svg" class="icon" alt="Github" />
+      <p>Find me on</p>
+      <div class="social-media">
+        <a href="https://github.com/o-vilna" target="_blank">
+          <img src="img/github.svg" alt="Github" />
         </a>
-        <!--LinkedIn logo-->
         <a
-          class="social-icon-links"
           href="https://www.linkedin.com/in/olha-tsurenko-24b36951/"
           target="_blank"
         >
-          <img src="./img/mylinkedin.svg" class="icon" alt="LinkedIn" />
+          <img src="img/linkedin.svg" alt="LinkedIn" />
         </a>
-        <!--Facebook logo-->
-        <a
-          class="social-icon-links"
-          href="https://www.facebook.com/profile.phd/?id=100000603968886"
-          target="_blank"
-        >
-          <img src="./img/facebook.svg" class="icon" alt="Facebook" />
+        <a href="https://www.facebook.com/olga.tsurenko/" target="_blank">
+          <img src="img/facebook.svg" alt="Facebook" />
+        </a>
+        <a href="https://medium.com/@olga.tsurenko" target="_blank">
+          <img src="img/medium.svg" alt="Medium" />
+        </a>
+        <a href="https://x.com/OlHaTsur" target="_blank">
+          <img src="img/x.svg" alt="Twitter/X" />
         </a>
       </div>
+      <p>&copy; 2025 Olha Tsurenko</p>
     </footer>
     <div class="back-to-top-button">
       <button onclick="window.scrollTo(0, 0)">Back to top</button>
